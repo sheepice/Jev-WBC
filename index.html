@@ -21,6 +21,30 @@
   <link rel="icon" href="./static/images/favicon.svg">
 
   <style>
+    /* Light gradient + faint grid so the background is not plain white. */
+    body {
+      background:
+        radial-gradient(1100px 480px at 50% -120px, rgba(118, 183, 255, .16), transparent 70%),
+        linear-gradient(180deg, #fafcfe 0%, #f3f6fa 55%, #fafafc 100%);
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(100, 125, 165, .06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 125, 165, .06) 1px, transparent 1px);
+      background-size: 52px 52px;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+    }
+    .footer {
+      background-color: transparent;
+    }
+
     /* Gray placeholder that keeps the size/layout of a 16:9 demo video. */
     .video-placeholder {
       width: 100%;
@@ -80,8 +104,8 @@
           <h1 class="title is-1 publication-title">Jev-WBC: Transition-Aware Skill Arbitration for Humanoid Whole-Body Control</h1>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Jiawei Wang</span>,
-            <span class="author-block">Xike Yang</span>
+            <span class="author-block">Xike Yang</span>,
+            <span class="author-block">Jiawei Wang</span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -135,7 +159,7 @@
 </section>
 
 
-<section class="hero is-light is-small">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-centered">
@@ -337,7 +361,7 @@
     <h2 class="title">BibTeX</h2>
     <!-- TODO: fill in venue and year once the paper is ready. -->
     <pre><code>@article{jevwbc2026,
-  author  = {Wang, Jiawei and Yang, Xike},
+  author  = {Yang, Xike and Wang, Jiawei},
   title   = {Jev-WBC: Transition-Aware Skill Arbitration for Humanoid Whole-Body Control},
   journal = {arXiv preprint},
   year    = {2026},
